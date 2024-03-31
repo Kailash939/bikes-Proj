@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+<h1>Bike's Insert/Update form</h1>
+<form method='POST'>
+    {{form.as_p}}
+    {% csrf_token %}
+    <input class="btn btn-info" type='Submit' name='' value='Insert/Update Bikes'>
+</form>
+{% endblock %}

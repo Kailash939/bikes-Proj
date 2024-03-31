@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+<h1 class="text-warning">{{bikes.name}} Information..</h1>
+<ul>
+    <h2><li>Bike Name: {{bikes.name}}</li></h2>
+    <h2><li>Bike Engine: {{bikes.engine}}</li></h2>
+    <h2><li>Bike Millage: {{bikes.milage}}</li></h2>
+    <h2><li>Bike Price: {{bikes.price}}</li></h2>
+</ul>
+<a class="btn btn-success" href='/update/{{bikes.id}}'>Update Record</a>
+<a class="btn btn-danger" href='/delete/{{bikes.id}}'>Delete Record</a>
+<a class="btn btn-primary" href="/">Bikes List</a>
+{% endblock %}

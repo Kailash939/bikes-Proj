@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+<h1 class="text-light bg-dark">List of all the Bikes...</h1>
+<ol>
+    {% for bike in bikes_list %}
+    <h2><li><a href='/{{bike.id}}'>{{bike.name}}</a></li></h2>
+    {% endfor %}
+</ol>
+<a class="btn btn-success" href='/create/{{bikes.id}}'>create Record</a>
+{% endblock %}
